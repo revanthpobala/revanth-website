@@ -1,0 +1,112 @@
+
+
+
+
+var express = require('express'),
+    app = express(),
+    cons = require('consolidate'),
+    MongoClient = require('mongodb').MongoClient,
+    Server = require('mongodb').Server;
+
+var port = 8060;
+
+
+app.engine('html', cons.swig);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+
+
+
+
+
+
+
+var mongoclient = new MongoClient(new Server("localhost", 27017));
+var db = mongoclient.db('website');
+
+
+
+
+
+
+console.log("listening on http://localhost:"+port);
+app.use(function(req, res, next)
+{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+app.get('/', function(req, res, next)
+{
+    db.collection('slider').findOne({},function(err,doc){
+        res.render('home',doc)});
+  });
+
+
+/*app.get('/home.html', function(req, res, next)
+{
+    res.sendFile(__dirname + '/home.html');
+
+});*/
+/*app.get('/index.html', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/index.html');
+		});
+app.get('/projects.html', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/projects.html');
+		});
+app.get('/photography.html', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/photography.html');
+		});
+app.get('/education.png', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/education.png');
+		});
+app.get('/contact.png', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/contact.png');
+		});
+app.get('/projects.png', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/projects.png');
+		});
+app.get('/camera.png', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/camera.png');
+		});
+app.get('/js/smoke.js', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/js/smoke.js');
+		});
+app.get('/css/smoke.css', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/css/smoke.css');
+		});
+app.get('/lang/es.js', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/lang/es.js');
+		});
+app.get('/img/loading.gif', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/img/loading.gif');
+		});
+app.get('/css/photo.js', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/css/photo.css');
+		});
+app.get('/js/photo.js', function(req, res, next)
+		{
+		    res.sendFile(__dirname + '/js/photo.js');
+		});*/
+app.get('*', function(req, res){
+    res.send('Page Not Found', 404);
+});
+
+
+mongoclient.open(function(err,mongoclient){
+if(err) throw err;
+app.listen(port);
+});

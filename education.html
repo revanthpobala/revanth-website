@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<title>Revanth Pobala</title>
+<meta name="Description" content="This website is about Revanth Pobala. You can find my resume and projects I have worked so far and some good stuff.">
+<meta name="Keywords" content="University of Texas Arlington, Revanth Pobala, Computer Science Engineering, Information  Security, Machine Learning, Lilac, isec.uta.edu, Linkedin, Instagram, Database, Java, Apache Spark, Python, CSE, cse ,UTA , uta, isec, revanth, pobala , arlington, dallas, fortworth, Dallas, Fortworth, Arlington, Graduate Student, Graduate">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.6.0/annyang.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="lang/es.js"></script>
+    <script>
+        function launch_modal() {
+            $('#contact_modal').modal('show').effect("shake");
+            document.getElementById("form").reset();
+        }
+
+        function validate() {
+            if ($('#form').smkValidate()) {
+            	
+                $.smkAlert({
+                    text: 'Thank you for contacting me',
+                    type: 'success'
+                });
+            }
+        }
+
+        function close_mod() {
+            $('#contact_modal').modal('hide').effect("explode");
+        }
+        function home(){
+        	window.location.assign("http:// home.html");
+        }
+        function education(){
+        	window.location.assign("");//education
+        }
+        function projects(){
+        	window.location.assign("");//projects
+        }
+        function photography(){
+        	window.location.assign("");//photography
+        }
+        
+        
+        
+        
+    </script>
+    <script>
+        function speech() {
+            if (annyang) {
+                var commands = {
+                    'contact': function() {
+                        launch_modal();
+                    },
+                    'home' : function() {
+						home();                        
+                        
+                    },
+                    'education': function() {
+                    	education();
+                    	
+                    },
+                    'projects': function() {
+                    	projects();
+                    
+                    },
+                    'photography': function() {
+                    	photography();
+                    },
+                    'close': function() {
+                    	close_mod();
+                    },
+                    'validate': function() {
+                    	validate();
+                    }
+                }
+            }
+            annyang.debug();
+            annyang.setLanguage('en-US');
+            annyang.start(
+					{
+						autoRestart: false,
+						continuous: true
+					});
+           
+        }
+     
+    </script>
+    <style>
+        .#about_me {
+            height: 15px;
+            width: 2em;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body style="background-color:#D7D7D7; height:100%,width:100% overflow:hidden; overflow-x: hidden;">
+    <!-- Header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand " style="color: ;" href="index.html"><b>Revanth Pobala</b></a> </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a  href="index.html" id="about_me" class="btn glyphicon glyphicon-home" data-toggle="tooltip" data-placement="bottom" title="Home" data-original-title="About me" onclick="home();"></a>
+                        </li>
+                        <li>
+                            <a href="education.html" id="education" class="btn  glyphicon glyphicon-book" data-toggle="tooltip" data-placement="bottom" title="Edcucation" data-original-title="Education"onclick="education();"></a>
+                        </li>
+                        <li>
+                            <a href="projects.html"  id="projects" class="btn glyphicon fa fa-github" data-toggle="tooltip" data-placement="bottom" title="Projects" data-original-title="Projects"onclick="projects();"></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/r3vanth/"  id="hobbies" class="btn  glyphicon fa fa-instagram" data-toggle="tooltip" data-placement="bottom" title="Photography" data-original-title="Photography"onclick="photography();"></a>
+                        </li>
+                        <li>
+                            <a id="speech" onclick="speech();" class="btn  glyphicon fa fa-microphone" data-toggle="tooltip" data-placement="bottom" title="Voice commands" data-original-title="Voice commands"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </nav>
+    <!-- Header End -->
+    <!-- Body Start -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- One grid space -->
+            <div class="col-lg-1"></div>
+            <!-- end -->
+            <div class="col-lg-10">
+                <br>
+                <div class="jumbotron" style="background-color:white; z=-1;">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="col-lg-1"></div>
+                            <br>
+                            <br>
+                            <div class="col-lg-10"> <img class="img-responsive img-thumbnail" src="https://scontent-dfw.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10411863_4978613838773_3559737356216864524_n.jpg?oh=912ce06db9883e98d47c0d558dc5480f&oe=55CC354D" style="height:100%;width:100%"> </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <h3> <b>Revanth Pobala</b></h3>
+                                <h4>Actively, looking for Fulltime position/Co-op position in a software company</h4>
+                                <!-- div class="col-lg-12"-->
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Current</h5> </div>
+                                    <div class="col-lg-4">
+                                        <h5>Graduate Research Assistant at <a style="text-decoration:none; color:black;"  target="_blank" href="http://www.uta.edu">University of Texas at Arlington</a></h5> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Programming Languages</h5> </div>
+                                    <div class="col-lg-4">
+                                        <h5>C, C++, Core Java, Javascript, Python</h5> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Certifications</h5> </div>
+                                    <div class="col-lg-8">
+                                        <h5>IBM Tivoli Directory Server V6.0, IBM RAD for websphere, mongoDB for DBA, mongoDB for Developers</h5> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Frame works</h5> </div>
+                                    <div class="col-lg-4">
+                                        <h5>nodejs, Bootstrap</h5> </div>
+                                </div>
+
+
+	                      <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Data Analysis</h5> </div>
+                                    <div class="col-lg-4">
+                                        <h5>Apache Spark.</h5> </div>
+                                </div>
+
+
+                             <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Cloud Technologies</h5> </div>
+                                    <div class="col-lg-4">
+                                        <h5>Google App Engine, Amazon AWS.</h5> </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <h5 class="text-muted">Database Technologies</h5> </div>
+                                    <div class="col-lg-4">
+                                        <h5>MySql, mongoDB</h5> </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row"> <a class="btn btn-primary " onclick="launch_modal();" id="contact">Contact Me</a> </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Summary Div -->
+                <div class="jumbotron" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <h2><b>Introduction</b></h2> </div>
+                            <div class="row">
+                                <h3 class="text-justify" > <small >I am currently pursuing Masters of Science Thesis in Computer Science at The University of Texas at Arlington. My expertise includes Web Development, Data Analysis, and Interpretation. I love to generate new ideas and devise feasible solutions to broadly relevant problems. My supervisors and colleagues would describe me as a driven, resourceful individual who maintains a positive, proactive attitude when faced with adversity.  Currently, I am seeking Internship opportunities that will allow me to use my diverse skill set to develop new applications that protect the privacy of a user. Specific fields of interest include Website development and Application development. 
+
+               		</small> </h3>
+
+
+
+ </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <!-- Summary Div End -->
+                <!-- Work Experience -->
+                <div class="jumbotron" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><b> Work Experience</h2></b>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4> Graduate Research Assistant</h4></div>
+                                <div class="col-lg-4">
+                                    <h4 class="text-primary">University of Texas Arlington.</h4> </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <p>
+                                <ul>
+                                    <li>Developing anonymous Instant Messaging system named <a target="_blank" style="text-decoration:none; color:black;" href="http://isec.uta.edu:8060">Lilac</a>.</li>
+                                    <li>Developing required infrastructure for it.</li>
+                                    <li>Deploying the chat application on the planetLab.</li>
+                                    <li>Testing the chat application with various parameters.</li>
+ 				    <li>Supervising an Undergraduate Student.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4> Software Developer</h4></div>
+                                <div class="col-lg-4">
+                                    <h4 class="text-primary">smartData Enterprises</h4> </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <p>
+                                <ul>
+                                    <li>Programming with Php and other technologies.</li>
+                                    <li>Applying object oriented principles, designs and patterns.</li>
+                                    <li>Conducting analysis and design of user requests.</li>
+                                    <li>Designing websites.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h4> Research Assistant</h4></div>
+                                <div class="col-lg-6">
+                                    <h4 class="text-primary">Defence Research Development Organization</h4> </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <p>
+                                <ul>
+                                    <li>Classification of Datasets related to the solar panels.</li>
+                                    <li>Determining the exact angle for the placement of solar panels.</li>
+                                    <li>Extracting the data and seperating the data from very large sets.</li>
+                                    <li>Collaborating with fellow scientists to achieve success.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <!-- Experience End -->
+                <!-- language- proficiency -->
+                <div class="jumbotron" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><b> Language Proficiency</b></h2> </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> C</small></h2>
+                            <div class="progress progress">
+                                <div class="progress-bar progress-bar-info" style="width: 60%"></div>
+                            </div> </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> C++</small></h2>
+                            <div class="progress progress">
+                                <div class="progress-bar progress-bar-info" style="width: 60%"></div>
+                            </div>  </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> Core Java</small></h2>
+                            <div class="progress progress">
+                                <div class="progress-bar progress-bar-success" style="width: 80%"></div>
+                            </div>  </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> Javascript</small></h2>
+                            <div class="progress progress">
+                                <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                            </div>  </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> Python</small></h2>
+                            <div class="progress progress">
+                                <div class="progress-bar progress-bar-success" style="width: 75%"></div>
+                            </div>  </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <!-- End prof -->
+                <!-- Certifications -->
+                <div class="jumbotron" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><b>Certifications</b></h2> </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="col-lg-6">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-10">
+                                            <h2><small> <a target="_blank" style="text-decoration:none; color:black;"  href="https://drive.google.com/file/d/0BwizQHXPp1m6NHNGajJrV3ZjTmM/view?usp=sharing">IBM RAD</a></small></h2> </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-10">
+                                            <h2><small> <a target="_blank" style="text-decoration:none; color:black;"  href="https://drive.google.com/file/d/0BwizQHXPp1m6VVBNRy01Mk4wUnM/view?usp=sharing">IBM Tivoli Directory Server</a></small></h2> </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-10">
+                                            <h2><small> <a target="_blank" style="text-decoration:none; color:black;"  href="http://university.mongodb.com/course_completion/bf221c7afc3b451dbf73535cb5fc8131">mongoDB for DBA</a></small></h2> </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-lg-10">
+                                            <h2><small> <a target="_blank" style="text-decoration:none; color:black;"  href="http://university.mongodb.com/course_completion/9d9baacacb364068824fe47d6e3494d9">mongoDB for Developers</a></small></h2> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-6"><img style="height:100%; width:100%;" class="img-responsive" src="https://fernandokarnagi.files.wordpress.com/2008/03/certrational_color.gif"></div>
+                                        <div class="col-lg-6"><img style="height:95%; width:90%;" class="img-responsive" src="http://www.exstor.de/wp-content/uploads/2011/09/CertTiv_color.jpg"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6"><img class="img-responsive" style="height:100%; width:100%;" src="http://media.bestofmicro.com/Z/9/431541/gallery/mongo-db-logo_w_450.png"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certifications end -->
+                <!-- Database -->
+                <div class="jumbotron" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><b>Database Technologies</b></h2> </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> Mysql</small></h2>
+                            <div class="progress progress ">
+                                <div class="progress-bar progress-bar-success" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <h2><small> MongoDB</small></h2>
+                            <div class="progress progress">
+                                <div class="progress-bar progress-bar-success" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Database end -->
+                <!-- Ending section -->
+                <div class="jumbotron" style="background-color:white;">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6">
+                            <h4>You can download my latest resume from here</h4> </div>
+                        <div class="col-lg-1"><a href="resume.pdf"class="btn btn-default fa fa-file ">&nbsp&nbsp Resume</a></div>
+                    </div>
+                </div>
+                <!-- Ending section -->
+                <!-- Footer -->
+                <center>
+                    <a target="_blank " style="text-decoration:none; color:black " href="https://www.linkedin.com/in/revanthpobala " class=" fa fa-linkedin "></a> &nbsp&nbsp
+                    <a target="_blank " style="text-decoration:none; color:black; " href="https://www.facebook.com/revanth1108 " class=" fa fa-facebook "></a> &nbsp&nbsp
+                    <a target="_blank " style="text-decoration:none; color:black; " href="https://github.com/revanthpobala " class=" fa fa-github "></a> &nbsp&nbsp
+                    <a target="_blank " style="text-decoration:none; color:black; " href="https://instagram.com/r3vanth/ " class=" fa fa-instagram "></a>
+                </center>
+                <center>
+                    <h6>&copy Revanth Pobala. All Rights Reserved.</h6> </center>
+                <!-- Footer end -->
+
+            </div>
+            <!-- One grid space -->
+            <div class="col-lg-1"></div>
+            <!-- end -->
+        </div>
+    </div>
+    <!-- Modal contact start -->
+    
+
+
+
+
+ <!-- Address Modal -->
+     <div class="modal " id="contact_modal">
+        <div class="modal-dialog ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <center>
+                        <h3 class="modal-title "><div class="glyphicon glyphicon-phone-alt "></div>&nbsp&nbspContact Me </h3></center>
+                </div>
+                    <div class="modal-body ">
+	
+		<div class="row">
+	<div class="col-lg-12">
+		<div class="col-lg-4">
+		<address>
+		  <strong>Revanth Pobala</strong><br>
+		  400 S Oak Street #234<br>
+		  Arlington, Tx-76010.<br>
+		  <abbr title="Phone ">P:</abbr> (931) 284-8422
+		</address>
+
+		<address>
+		  <strong>E-mail</strong><br>
+		  <a href="mailto:revanth.pobala@mavs.uta.edu ">revanth.pobala@mavs.uta.edu</a>
+		</address>
+                 <a href= "resume.pdf "class="btn btn-warning ">Download Resume</a>
+                    </div>
+</div><br><br>
+
+
+		<div class="col-lg-8" style="
+    top: 19px;
+    left: 18px;
+">
+
+<iframe width="500" height="80%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=400%20S%20Oak%20St%2C%20Arlington%2C%20TX%2C%20United%20States&key=AIzaSyDlKUMhx576TO7q5PFg1N4HCNrS3JMFCRs"></iframe>
+</div>
+		</div>
+		</div>
+
+
+
+                    <div class="modal-footer ">
+                        <button type="button " class="btn fa fa-times " id="close_mod " onclick="close_mod(); " ></button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal contact end -->
+    
+    
+    
+    <!-- Body End -->
+</body>
+
+</html>
